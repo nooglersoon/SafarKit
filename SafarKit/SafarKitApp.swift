@@ -1,17 +1,16 @@
-//
-//  SafarKitApp.swift
-//  SafarKit
-//
-//  Created by Fauzi Achmad B D on 19/02/23.
-//
-
 import SwiftUI
 
 @main
 struct SafarKitApp: App {
+    @State private var appStartState: AppState = .splashscreen
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch appStartState {
+            case .splashscreen:
+                SplashScreen(appStartState: $appStartState)
+            case .home:
+                ContentView()
+            }
         }
     }
 }

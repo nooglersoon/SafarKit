@@ -1,6 +1,8 @@
 import SwiftUI
 
-struct SplashscreenView: View {
+struct SplashScreen: View {
+    @Binding var appStartState: AppState
+    
     var body: some View {
         ZStack {
             Color.init(red: 72/255, green: 108/255, blue: 91/255)
@@ -13,6 +15,13 @@ struct SplashscreenView: View {
                     .foregroundColor(.white)
             }
         }
-        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                withAnimation(.easeOut(duration: 0.5)) {
+                    self.appStartState = .home
+                }
+            }
+        }
     }
 }

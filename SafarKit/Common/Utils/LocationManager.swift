@@ -6,9 +6,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var degrees: Double = .zero
     @Published var userLocation: CLLocation?
-    @Published var userRegion: MKCoordinateRegion = .init()
     
-    private let kabah = CLLocationCoordinate2D(latitude: 21.4225, longitude: 39.8262)
+    private let kabah = MKCoordinateRegion.kaabahRegion().center
     private let locationManager: CLLocationManager
     
     override init() {
@@ -38,12 +37,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         guard let newLocation = locations.last else { return }
         DispatchQueue.main.async {
             self.userLocation = newLocation
-            self.userRegion = MKCoordinateRegion(
-                center: newLocation.coordinate,
-                span: MKCoordinateSpan(
-                    latitudeDelta: 0.05,
-                    longitudeDelta: 0.05)
-            )
         }
     }
     

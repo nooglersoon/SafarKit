@@ -1,7 +1,17 @@
 import SwiftUI
+import MapKit
 
 struct ExploreView: View {
     @StateObject var locationManager = LocationManager()
+    
+    var region: Binding<MKCoordinateRegion>? {
+        guard let location = locationManager.userLocation else {
+            return MKCoordinateRegion.kaabahRegion().getBinding()
+        }
+        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        return region.getBinding()
+    }
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -41,9 +51,11 @@ struct ExploreView: View {
                             .offset(y: -(geo.size.width * 0.375))
                     }
                     .rotationEffect(Angle(degrees: self.locationManager.degrees))
-                    MainMapView(region: $locationManager.userRegion)
-                        .frame(width: geo.size.width * 0.6, height: geo.size.width * 0.6)
-                        .padding(4)
+                    if let region = region {
+                        MainMapView(region: region)
+                            .frame(width: geo.size.width * 0.6, height: geo.size.width * 0.6)
+                            .padding(4)
+                    }
                 }
                 .padding(.horizontal, 16)
                 VStack {

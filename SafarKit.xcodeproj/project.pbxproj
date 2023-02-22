@@ -14,6 +14,7 @@
 		01A83FD829A617F6009BF6BB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD729A617F6009BF6BB /* AppState.swift */; };
 		01A83FDB29A61EA9009BF6BB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FDA29A61EA9009BF6BB /* LocationManager.swift */; };
 		01F30BC129A676F00049A728 /* UserLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30BC029A676F00049A728 /* UserLocationModel.swift */; };
+		01F30BC329A6807F0049A728 /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */; };
 		01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */; };
 		01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B229A1FA8200D7B59B /* ContentView.swift */; };
 		01F9A9B529A1FA8300D7B59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9A9B429A1FA8300D7B59B /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		01A83FD729A617F6009BF6BB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		01A83FDA29A61EA9009BF6BB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		01F30BC029A676F00049A728 /* UserLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationModel.swift; sourceTree = "<group>"; };
+		01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
 		01F9A9AD29A1FA8200D7B59B /* SafarKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafarKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafarKitApp.swift; sourceTree = "<group>"; };
 		01F9A9B229A1FA8200D7B59B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */,
+				01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */,
 				01F9A9C229A1FE5700D7B59B /* ExploreView.swift in Sources */,
 				01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */,
+				01F30BC329A6807F0049A728 /* MKCoordinateRegion+Ext.swift in Sources */,
 				01F30BC129A676F00049A728 /* UserLocationModel.swift in Sources */,
 				01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */,
 			);

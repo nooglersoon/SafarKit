@@ -12,6 +12,8 @@
 		01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */; };
 		01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */; };
 		01A83FD829A617F6009BF6BB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD729A617F6009BF6BB /* AppState.swift */; };
+		01A83FDB29A61EA9009BF6BB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FDA29A61EA9009BF6BB /* LocationManager.swift */; };
+		01F30BC129A676F00049A728 /* UserLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30BC029A676F00049A728 /* UserLocationModel.swift */; };
 		01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */; };
 		01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B229A1FA8200D7B59B /* ContentView.swift */; };
 		01F9A9B529A1FA8300D7B59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9A9B429A1FA8300D7B59B /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShalatReminderBadges.swift; sourceTree = "<group>"; };
 		01A83FD729A617F6009BF6BB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		01A83FDA29A61EA9009BF6BB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		01F30BC029A676F00049A728 /* UserLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationModel.swift; sourceTree = "<group>"; };
 		01F9A9AD29A1FA8200D7B59B /* SafarKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafarKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafarKitApp.swift; sourceTree = "<group>"; };
 		01F9A9B229A1FA8200D7B59B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,17 +60,19 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		01A83FD029A5F3CA009BF6BB /* App */ = {
+		01A83FD029A5F3CA009BF6BB /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */,
 			);
-			path = App;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		01A83FD529A617CF009BF6BB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				01A83FD929A61E9E009BF6BB /* Utils */,
+				01A83FD029A5F3CA009BF6BB /* Extension */,
 				01A83FD629A617E4009BF6BB /* Interface */,
 			);
 			path = Common;
@@ -78,6 +84,48 @@
 				01A83FD729A617F6009BF6BB /* AppState.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		01A83FD929A61E9E009BF6BB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				01A83FDA29A61EA9009BF6BB /* LocationManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		01F30BBB29A676970049A728 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				01F30BBF29A676D80049A728 /* Splashscreen */,
+				01F30BBE29A676BE0049A728 /* Explore */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		01F30BBD29A676B80049A728 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				01F30BC029A676F00049A728 /* UserLocationModel.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		01F30BBE29A676BE0049A728 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				01F9A9BE29A1FD0000D7B59B /* UI */,
+				01F30BBD29A676B80049A728 /* Interface */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		01F30BBF29A676D80049A728 /* Splashscreen */ = {
+			isa = PBXGroup;
+			children = (
+				01F9A9BF29A1FD1400D7B59B /* Splashscreen.swift */,
+			);
+			path = Splashscreen;
 			sourceTree = "<group>";
 		};
 		01F9A9A429A1FA8200D7B59B = {
@@ -99,9 +147,8 @@
 		01F9A9AF29A1FA8200D7B59B /* SafarKit */ = {
 			isa = PBXGroup;
 			children = (
+				01F30BBB29A676970049A728 /* Module */,
 				01A83FD529A617CF009BF6BB /* Common */,
-				01A83FD029A5F3CA009BF6BB /* App */,
-				01F9A9BE29A1FD0000D7B59B /* UI */,
 				01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */,
 				01F9A9B229A1FA8200D7B59B /* ContentView.swift */,
 				01F9A9B429A1FA8300D7B59B /* Assets.xcassets */,
@@ -123,7 +170,6 @@
 			children = (
 				01A83FCD29A5F0B8009BF6BB /* Components */,
 				01F9A9C129A1FE5700D7B59B /* ExploreView.swift */,
-				01F9A9BF29A1FD1400D7B59B /* Splashscreen.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -203,9 +249,11 @@
 				01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */,
 				01A83FD829A617F6009BF6BB /* AppState.swift in Sources */,
 				01F9A9C029A1FD1400D7B59B /* Splashscreen.swift in Sources */,
+				01A83FDB29A61EA9009BF6BB /* LocationManager.swift in Sources */,
 				01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */,
 				01F9A9C229A1FE5700D7B59B /* ExploreView.swift in Sources */,
 				01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */,
+				01F30BC129A676F00049A728 /* UserLocationModel.swift in Sources */,
 				01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +386,9 @@
 				DEVELOPMENT_TEAM = CVSRYHR3VR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Use the location to improve user experience";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Use the location to improve user experience";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Use the location to improve user experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,6 +418,9 @@
 				DEVELOPMENT_TEAM = CVSRYHR3VR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Use the location to improve user experience";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Use the location to improve user experience";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Use the location to improve user experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

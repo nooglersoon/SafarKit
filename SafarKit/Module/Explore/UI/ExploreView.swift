@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @StateObject var locationManager = LocationManager()
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -12,7 +13,7 @@ struct ExploreView: View {
                                 .font(.system(size: 18, weight: .regular, design: .serif))
                                 .foregroundColor(.black)
                             Text("Naples")
-                                .font(.system(size: 28, weight: .semibold, design: .serif))
+                                .font(.system(size: 28, weight: .bold, design: .serif))
                                 .foregroundColor(.black)
                         }
                         .padding(32)
@@ -27,22 +28,21 @@ struct ExploreView: View {
                     ZStack(alignment: .center) {
                         Circle()
                             .foregroundColor(.clear)
-                            .frame(width: geo.size.width * 0.7)
+                            .frame(width: geo.size.width * 0.75)
                             .overlay(
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: geo.size.width * 0.7)
+                                    RoundedRectangle(cornerRadius: geo.size.width * 0.75)
                                         .stroke(.white, lineWidth: 2)
-                                        .opacity(0.35)
                                 }
                             )
                         Image("kaaba")
                             .resizable()
-                            .frame(width: 40, height: 40)
-                            .offset(y: -(geo.size.width * 0.35))
+                            .frame(width: 35, height: 35)
+                            .offset(y: -(geo.size.width * 0.375))
                     }
-                    .rotationEffect(Angle(degrees: 30))
-                    MainMapView()
-                        .frame(width: geo.size.width * 0.5, height: geo.size.width * 0.5)
+                    .rotationEffect(Angle(degrees: self.locationManager.degrees))
+                    MainMapView(region: $locationManager.userRegion)
+                        .frame(width: geo.size.width * 0.6, height: geo.size.width * 0.6)
                         .padding(4)
                 }
                 .padding(.horizontal, 16)

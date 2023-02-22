@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A83FCC29A59BB3009BF6BB /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FCB29A59BB3009BF6BB /* MainMapView.swift */; };
+		01A83FCF29A5F0D3009BF6BB /* MiniProductButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FCE29A5F0D3009BF6BB /* MiniProductButtonView.swift */; };
+		01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */; };
+		01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */; };
 		01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */; };
 		01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B229A1FA8200D7B59B /* ContentView.swift */; };
 		01F9A9B529A1FA8300D7B59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9A9B429A1FA8300D7B59B /* Assets.xcassets */; };
 		01F9A9B829A1FA8300D7B59B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9A9B729A1FA8300D7B59B /* Preview Assets.xcassets */; };
+		01F9A9C029A1FD1400D7B59B /* Splashscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9BF29A1FD1400D7B59B /* Splashscreen.swift */; };
+		01F9A9C229A1FE5700D7B59B /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9C129A1FE5700D7B59B /* ExploreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01A83FCB29A59BB3009BF6BB /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
+		01A83FCE29A5F0D3009BF6BB /* MiniProductButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniProductButtonView.swift; sourceTree = "<group>"; };
+		01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShalatReminderBadges.swift; sourceTree = "<group>"; };
 		01F9A9AD29A1FA8200D7B59B /* SafarKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafarKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafarKitApp.swift; sourceTree = "<group>"; };
 		01F9A9B229A1FA8200D7B59B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01F9A9B429A1FA8300D7B59B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F9A9B729A1FA8300D7B59B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		01F9A9BF29A1FD1400D7B59B /* Splashscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splashscreen.swift; sourceTree = "<group>"; };
+		01F9A9C129A1FE5700D7B59B /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A83FCD29A5F0B8009BF6BB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				01A83FCB29A59BB3009BF6BB /* MainMapView.swift */,
+				01A83FCE29A5F0D3009BF6BB /* MiniProductButtonView.swift */,
+				01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		01A83FD029A5F3CA009BF6BB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		01F9A9A429A1FA8200D7B59B = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +81,8 @@
 		01F9A9AF29A1FA8200D7B59B /* SafarKit */ = {
 			isa = PBXGroup;
 			children = (
+				01A83FD029A5F3CA009BF6BB /* App */,
+				01F9A9BE29A1FD0000D7B59B /* UI */,
 				01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */,
 				01F9A9B229A1FA8200D7B59B /* ContentView.swift */,
 				01F9A9B429A1FA8300D7B59B /* Assets.xcassets */,
@@ -65,6 +97,16 @@
 				01F9A9B729A1FA8300D7B59B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01F9A9BE29A1FD0000D7B59B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				01A83FCD29A5F0B8009BF6BB /* Components */,
+				01F9A9C129A1FE5700D7B59B /* ExploreView.swift */,
+				01F9A9BF29A1FD1400D7B59B /* Splashscreen.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A83FCC29A59BB3009BF6BB /* MainMapView.swift in Sources */,
+				01A83FCF29A5F0D3009BF6BB /* MiniProductButtonView.swift in Sources */,
 				01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */,
+				01F9A9C029A1FD1400D7B59B /* Splashscreen.swift in Sources */,
+				01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */,
+				01F9A9C229A1FE5700D7B59B /* ExploreView.swift in Sources */,
+				01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */,
 				01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

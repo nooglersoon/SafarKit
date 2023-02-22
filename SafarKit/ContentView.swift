@@ -1,21 +1,8 @@
-//
-//  ContentView.swift
-//  SafarKit
-//
-//  Created by Fauzi Achmad B D on 19/02/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        ExploreView()
     }
 }
 

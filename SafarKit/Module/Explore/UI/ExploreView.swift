@@ -22,9 +22,11 @@ struct ExploreView: View {
                             Text("Hello, you are in")
                                 .font(.system(size: 18, weight: .regular, design: .serif))
                                 .foregroundColor(.black)
-                            Text("Naples")
-                                .font(.system(size: 28, weight: .bold, design: .serif))
-                                .foregroundColor(.black)
+                            if let city = locationManager.userCity {
+                                Text(city)
+                                    .font(.system(size: 32, weight: .bold, design: .serif))
+                                    .foregroundColor(.black)
+                            }
                         }
                         .padding(32)
                         Spacer()

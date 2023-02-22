@@ -6,6 +6,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var degrees: Double = .zero
     @Published var userLocation: CLLocation?
+    @Published var userCity: String?
     
     private let kabah = MKCoordinateRegion.kaabahRegion().center
     private let locationManager: CLLocationManager
@@ -25,6 +26,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             self.locationManager.startUpdatingHeading()
             guard let newLocation = self.locationManager.location else { return }
             self.userLocation = newLocation
+            self.reverseGeocoding(latitude: newLocation.coordinate.latitude, longitude: newLocation.coordinate.longitude)
         }
     }
     
@@ -56,6 +58,22 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func getAngleFromHeading(heading:CLHeading) -> Double {
         let angle = -heading.magneticHeading / 180.0 * .pi
         return angle * (180.0 / .pi)
+    }
+    
+    // Reverse Geocoding
+    
+    func reverseGeocoding(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let geocoder = CLGeocoder()
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        geocoder.reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
+            guard
+                error == nil,
+                let placemarks = placemarks,
+                let placemark = placemarks.first,
+                let city = placemark.locality
+            else { return }
+            self.userCity = city
+        })
     }
     
     // Helpers

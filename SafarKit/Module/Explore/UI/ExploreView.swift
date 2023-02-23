@@ -53,11 +53,26 @@ struct ExploreView: View {
                             .offset(y: -(geo.size.width * 0.375))
                     }
                     .rotationEffect(Angle(degrees: self.locationManager.degrees))
-                    if let region = region {
-                        MainMapView(region: region)
-                            .frame(width: geo.size.width * 0.6, height: geo.size.width * 0.6)
-                            .padding(4)
+//                    if let region = region {
+//                        MainMapView(region: region)
+//                            .frame(width: geo.size.width * 0.6, height: geo.size.width * 0.6)
+//                            .padding(4)
+//                    }
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: geo.size.width * 0.6)
+                    VStack(alignment: .center, spacing: 4) {
+                        Text("Dzuhr")
+                            .font(.system(size: 32, weight: .semibold, design: .serif))
+                            .foregroundColor(.AppColors.MainGreen.main)
+                        Text("12:15")
+                            .font(.system(size: 28, weight: .semibold, design: .serif))
+                            .foregroundColor(.black)
+                        Text("Local Time")
+                            .font(.system(size: 16, weight: .regular, design: .serif))
+                            .foregroundColor(.black)
                     }
+                    .padding(.horizontal, 32)
                 }
                 .padding(.horizontal, 16)
                 VStack {

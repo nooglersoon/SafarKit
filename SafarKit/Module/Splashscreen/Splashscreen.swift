@@ -2,7 +2,6 @@ import SwiftUI
 
 struct SplashScreen: View {
     @Binding var appStartState: AppState
-    
     var body: some View {
         ZStack {
             Color.init(red: 72/255, green: 108/255, blue: 91/255)

@@ -15,9 +15,7 @@ extension Endpoint {
     var scheme: String {
         return "https"
     }
-    
     var queryItems: [URLQueryItem]? {
         return nil
     }
-    
 }

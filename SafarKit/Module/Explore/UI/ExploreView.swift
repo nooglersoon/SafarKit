@@ -3,7 +3,6 @@ import MapKit
 
 struct ExploreView: View {
     @StateObject var locationManager = LocationManager()
-    
     var region: Binding<MKCoordinateRegion>? {
         guard let location = locationManager.userLocation else {
             return MKCoordinateRegion.kaabahRegion().getBinding()
@@ -11,7 +10,6 @@ struct ExploreView: View {
         let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         return region.getBinding()
     }
-    
     var body: some View {
         GeometryReader { geo in
             ZStack {

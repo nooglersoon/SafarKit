@@ -10,7 +10,6 @@ enum RequestError: Error {
     case badRequest([String])
     case internalServer(String)
     case unknown
-    
     var customMessage: String {
         switch self {
         case .decode:
@@ -25,7 +24,6 @@ enum RequestError: Error {
             return "Unknown error"
         }
     }
-    
     var code: Int {
         switch self {
         case .noConnection, .invalidURL, .decode, .noResponse:
@@ -42,5 +40,4 @@ enum RequestError: Error {
             return 0
         }
     }
-    
 }

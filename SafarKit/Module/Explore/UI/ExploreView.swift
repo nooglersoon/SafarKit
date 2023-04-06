@@ -26,6 +26,10 @@ struct ExploreView: View {
                                 Text(city)
                                     .font(.system(size: 32, weight: .bold, design: .serif))
                                     .foregroundColor(.black)
+                            } else {
+                                Text("Bandung")
+                                    .font(.system(size: 32, weight: .bold, design: .serif))
+                                    .foregroundColor(.black)
                             }
                         }
                         .padding(32)
@@ -53,11 +57,6 @@ struct ExploreView: View {
                             .offset(y: -(geo.size.width * 0.375))
                     }
                     .rotationEffect(Angle(degrees: self.locationManager.degrees))
-//                    if let region = region {
-//                        MainMapView(region: region)
-//                            .frame(width: geo.size.width * 0.6, height: geo.size.width * 0.6)
-//                            .padding(4)
-//                    }
                     Circle()
                         .foregroundColor(.white)
                         .frame(width: geo.size.width * 0.6)

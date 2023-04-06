@@ -1,6 +1,7 @@
 import Foundation
 import CoreLocation
 import MapKit
+import NetworkService
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
@@ -81,5 +82,10 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private func degreesToRadians(_ degrees: Double) -> Double { return degrees * Double.pi / 180.0 }
     
     private func radiansToDegrees(_ radians: Double) -> Double { return radians * 180.0 / Double.pi }
+
+    func test() {
+        let service: NetworkService = NetworkService()
+        print(NetworkService.startService)
+    }
     
 }

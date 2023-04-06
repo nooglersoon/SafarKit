@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016C9BFB29DF015C002BCDF5 /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 016C9BFA29DF015C002BCDF5 /* NetworkService */; };
 		01A83FCC29A59BB3009BF6BB /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FCB29A59BB3009BF6BB /* MainMapView.swift */; };
 		01A83FCF29A5F0D3009BF6BB /* MiniProductButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FCE29A5F0D3009BF6BB /* MiniProductButtonView.swift */; };
 		01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		016C9BFC29DF01E9002BCDF5 /* SafarKitPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SafarKitPackages; sourceTree = "<group>"; };
 		01A83FCB29A59BB3009BF6BB /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
 		01A83FCE29A5F0D3009BF6BB /* MiniProductButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniProductButtonView.swift; sourceTree = "<group>"; };
 		01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
@@ -44,12 +46,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016C9BFB29DF015C002BCDF5 /* NetworkService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016C9BF129DEFC92002BCDF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		016C9BF429DEFE11002BCDF5 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				016C9BFC29DF01E9002BCDF5 /* SafarKitPackages */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		01A83FCD29A5F0B8009BF6BB /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,8 +149,10 @@
 		01F9A9A429A1FA8200D7B59B = {
 			isa = PBXGroup;
 			children = (
+				016C9BF429DEFE11002BCDF5 /* Packages */,
 				01F9A9AF29A1FA8200D7B59B /* SafarKit */,
 				01F9A9AE29A1FA8200D7B59B /* Products */,
+				016C9BF129DEFC92002BCDF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,6 +210,9 @@
 			dependencies = (
 			);
 			name = SafarKit;
+			packageProductDependencies = (
+				016C9BFA29DF015C002BCDF5 /* NetworkService */,
+			);
 			productName = SafarKit;
 			productReference = 01F9A9AD29A1FA8200D7B59B /* SafarKit.app */;
 			productType = "com.apple.product-type.application";
@@ -461,6 +484,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		016C9BFA29DF015C002BCDF5 /* NetworkService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkService;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01F9A9A529A1FA8200D7B59B /* Project object */;
 }

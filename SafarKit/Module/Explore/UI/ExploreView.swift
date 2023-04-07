@@ -1,8 +1,14 @@
 import SwiftUI
 import MapKit
+import LocationService
 
 struct ExploreView: View {
-    @StateObject var locationManager = LocationManager()
+    
+    @StateObject var locationManager = LocationService(
+        locationManager: CLLocationManager(),
+        kaabahCoordinate: MKCoordinateRegion.kaabahRegion().center
+    )
+    
     var region: Binding<MKCoordinateRegion>? {
         guard let location = locationManager.userLocation else {
             return MKCoordinateRegion.kaabahRegion().getBinding()

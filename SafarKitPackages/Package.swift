@@ -10,7 +10,10 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "NetworkService",
-            targets: ["NetworkService"])
+            targets: ["NetworkService"]),
+        .library(
+            name: "LocationService",
+            targets: ["LocationService"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,6 +27,12 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "NetworkServiceTests",
-            dependencies: ["NetworkService"])
+            dependencies: ["NetworkService"]),
+        .target(
+            name: "LocationService",
+            dependencies: []),
+        .testTarget(
+            name: "LocationServiceTests",
+            dependencies: ["LocationService"])
     ]
 )

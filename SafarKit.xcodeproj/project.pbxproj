@@ -13,7 +13,7 @@
 		01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */; };
 		01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */; };
 		01A83FD829A617F6009BF6BB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD729A617F6009BF6BB /* AppState.swift */; };
-		01A83FDB29A61EA9009BF6BB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FDA29A61EA9009BF6BB /* LocationManager.swift */; };
+		01A8D4FD29DFC5D70094EDEE /* LocationService in Frameworks */ = {isa = PBXBuildFile; productRef = 01A8D4FC29DFC5D70094EDEE /* LocationService */; };
 		01F30BC329A6807F0049A728 /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */; };
 		01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */; };
 		01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B229A1FA8200D7B59B /* ContentView.swift */; };
@@ -30,7 +30,6 @@
 		01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShalatReminderBadges.swift; sourceTree = "<group>"; };
 		01A83FD729A617F6009BF6BB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		01A83FDA29A61EA9009BF6BB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
 		01F9A9AD29A1FA8200D7B59B /* SafarKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafarKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafarKitApp.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				016C9BFB29DF015C002BCDF5 /* NetworkService in Frameworks */,
+				01A8D4FD29DFC5D70094EDEE /* LocationService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,6 @@
 		01A83FD529A617CF009BF6BB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				01A83FD929A61E9E009BF6BB /* Utils */,
 				01A83FD029A5F3CA009BF6BB /* Extension */,
 				01A83FD629A617E4009BF6BB /* Interface */,
 			);
@@ -105,14 +104,6 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
-		01A83FD929A61E9E009BF6BB /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				01A83FDA29A61EA9009BF6BB /* LocationManager.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		01F30BBB29A676970049A728 /* Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,18 +113,10 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
-		01F30BBD29A676B80049A728 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interface;
-			sourceTree = "<group>";
-		};
 		01F30BBE29A676BE0049A728 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
 				01F9A9BE29A1FD0000D7B59B /* UI */,
-				01F30BBD29A676B80049A728 /* Interface */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -213,6 +196,7 @@
 			name = SafarKit;
 			packageProductDependencies = (
 				016C9BFA29DF015C002BCDF5 /* NetworkService */,
+				01A8D4FC29DFC5D70094EDEE /* LocationService */,
 			);
 			productName = SafarKit;
 			productReference = 01F9A9AD29A1FA8200D7B59B /* SafarKit.app */;
@@ -294,7 +278,6 @@
 				01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */,
 				01A83FD829A617F6009BF6BB /* AppState.swift in Sources */,
 				01F9A9C029A1FD1400D7B59B /* Splashscreen.swift in Sources */,
-				01A83FDB29A61EA9009BF6BB /* LocationManager.swift in Sources */,
 				01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */,
 				01F9A9C229A1FE5700D7B59B /* ExploreView.swift in Sources */,
 				01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */,
@@ -511,6 +494,10 @@
 		016C9BFA29DF015C002BCDF5 /* NetworkService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkService;
+		};
+		01A8D4FC29DFC5D70094EDEE /* LocationService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LocationService;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

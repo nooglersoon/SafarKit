@@ -1,11 +1,11 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "SafarKit",
-    platforms: [.iOS(.v16)],
+    platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -13,7 +13,10 @@ let package = Package(
             targets: ["NetworkService"]),
         .library(
             name: "LocationService",
-            targets: ["LocationService"])
+            targets: ["LocationService"]),
+        .library(
+            name: "ShalatSchedule",
+            targets: ["ShalatSchedule"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -33,6 +36,9 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "LocationServiceTests",
-            dependencies: ["LocationService"])
+            dependencies: ["LocationService"]),
+        .target(
+            name: "ShalatSchedule",
+            dependencies: [])
     ]
 )

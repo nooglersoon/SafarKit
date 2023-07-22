@@ -9,13 +9,6 @@ struct ExploreView: View {
         kaabahCoordinate: MKCoordinateRegion.kaabahRegion().center
     )
     
-    var region: Binding<MKCoordinateRegion>? {
-        guard let location = locationManager.userLocation else {
-            return MKCoordinateRegion.kaabahRegion().getBinding()
-        }
-        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
-        return region.getBinding()
-    }
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -76,11 +69,6 @@ struct ExploreView: View {
                             .foregroundColor(.black)
                     }
                     .padding(.horizontal, 32)
-                }
-                .padding(.horizontal, 16)
-                VStack {
-                    Spacer()
-                    ShalatReminderBadgesView()
                 }
                 .padding(.horizontal, 16)
             }

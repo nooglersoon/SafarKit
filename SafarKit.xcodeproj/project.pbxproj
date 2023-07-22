@@ -14,6 +14,7 @@
 		01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */; };
 		01A83FD829A617F6009BF6BB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD729A617F6009BF6BB /* AppState.swift */; };
 		01A8D4FD29DFC5D70094EDEE /* LocationService in Frameworks */ = {isa = PBXBuildFile; productRef = 01A8D4FC29DFC5D70094EDEE /* LocationService */; };
+		01E26FFA2A56CDF30083DC6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E26FF92A56CDF30083DC6B /* MainView.swift */; };
 		01F30BC329A6807F0049A728 /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */; };
 		01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */; };
 		01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B229A1FA8200D7B59B /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 		01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShalatReminderBadges.swift; sourceTree = "<group>"; };
 		01A83FD729A617F6009BF6BB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		01E26FF92A56CDF30083DC6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
 		01F9A9AD29A1FA8200D7B59B /* SafarKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafarKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafarKitApp.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				01F30BBF29A676D80049A728 /* Splashscreen */,
 				01F30BBE29A676BE0049A728 /* Explore */,
+				01E26FF92A56CDF30083DC6B /* MainView.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				01F9A9C029A1FD1400D7B59B /* Splashscreen.swift in Sources */,
 				01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */,
 				01F9A9C229A1FE5700D7B59B /* ExploreView.swift in Sources */,
+				01E26FFA2A56CDF30083DC6B /* MainView.swift in Sources */,
 				01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */,
 				01F30BC329A6807F0049A728 /* MKCoordinateRegion+Ext.swift in Sources */,
 				01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */,
@@ -414,6 +418,7 @@
 				DEVELOPMENT_TEAM = CVSRYHR3VR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SafarKit;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Use the location to improve user experience";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Use the location to improve user experience";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Use the location to improve user experience";
@@ -422,6 +427,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,9 +435,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nooglersoon.id.SafarKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -446,6 +455,7 @@
 				DEVELOPMENT_TEAM = CVSRYHR3VR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SafarKit;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Use the location to improve user experience";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Use the location to improve user experience";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Use the location to improve user experience";
@@ -454,6 +464,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,9 +472,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nooglersoon.id.SafarKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

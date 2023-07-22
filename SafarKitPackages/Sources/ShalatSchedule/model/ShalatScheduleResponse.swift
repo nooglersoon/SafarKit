@@ -1,7 +1,7 @@
 import Foundation
 
 // MARK: - ShalatSchedule
-struct ShalatSchedule {
+struct ShalatScheduleResponse {
     let code: Int?
     let status: String?
     let data: DataResponse?

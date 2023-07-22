@@ -14,6 +14,12 @@
 		01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */; };
 		01A83FD829A617F6009BF6BB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83FD729A617F6009BF6BB /* AppState.swift */; };
 		01A8D4FD29DFC5D70094EDEE /* LocationService in Frameworks */ = {isa = PBXBuildFile; productRef = 01A8D4FC29DFC5D70094EDEE /* LocationService */; };
+		01CA0A422A6C373000FB7BE4 /* TabIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA0A412A6C373000FB7BE4 /* TabIndicator.swift */; };
+		01CA0A442A6C375200FB7BE4 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA0A432A6C375200FB7BE4 /* Header.swift */; };
+		01CA0A472A6C37B100FB7BE4 /* ShalatScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA0A462A6C37B100FB7BE4 /* ShalatScheduleView.swift */; };
+		01CA0A4A2A6C380200FB7BE4 /* ScheduleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA0A492A6C380200FB7BE4 /* ScheduleListItemView.swift */; };
+		01CA0A4C2A6C93F900FB7BE4 /* ScheduleListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA0A4B2A6C93F900FB7BE4 /* ScheduleListItemViewModel.swift */; };
+		01CA0A4E2A6C9CCC00FB7BE4 /* DottedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA0A4D2A6C9CCC00FB7BE4 /* DottedLineView.swift */; };
 		01E26FFA2A56CDF30083DC6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E26FF92A56CDF30083DC6B /* MainView.swift */; };
 		01F30BC329A6807F0049A728 /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */; };
 		01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A9B029A1FA8200D7B59B /* SafarKitApp.swift */; };
@@ -31,6 +37,12 @@
 		01A83FD129A5F3E2009BF6BB /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		01A83FD329A5F811009BF6BB /* ShalatReminderBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShalatReminderBadges.swift; sourceTree = "<group>"; };
 		01A83FD729A617F6009BF6BB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		01CA0A412A6C373000FB7BE4 /* TabIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabIndicator.swift; sourceTree = "<group>"; };
+		01CA0A432A6C375200FB7BE4 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		01CA0A462A6C37B100FB7BE4 /* ShalatScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShalatScheduleView.swift; sourceTree = "<group>"; };
+		01CA0A492A6C380200FB7BE4 /* ScheduleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListItemView.swift; sourceTree = "<group>"; };
+		01CA0A4B2A6C93F900FB7BE4 /* ScheduleListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListItemViewModel.swift; sourceTree = "<group>"; };
+		01CA0A4D2A6C9CCC00FB7BE4 /* DottedLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedLineView.swift; sourceTree = "<group>"; };
 		01E26FF92A56CDF30083DC6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
 		01F9A9AD29A1FA8200D7B59B /* SafarKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafarKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,12 +118,50 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
+		01CA0A3F2A6C371000FB7BE4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				01CA0A402A6C371D00FB7BE4 /* Views */,
+				01E26FF92A56CDF30083DC6B /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		01CA0A402A6C371D00FB7BE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01CA0A412A6C373000FB7BE4 /* TabIndicator.swift */,
+				01CA0A432A6C375200FB7BE4 /* Header.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01CA0A452A6C379A00FB7BE4 /* ShalatSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				01CA0A482A6C37E900FB7BE4 /* Views */,
+				01CA0A462A6C37B100FB7BE4 /* ShalatScheduleView.swift */,
+			);
+			path = ShalatSchedule;
+			sourceTree = "<group>";
+		};
+		01CA0A482A6C37E900FB7BE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01CA0A4B2A6C93F900FB7BE4 /* ScheduleListItemViewModel.swift */,
+				01CA0A492A6C380200FB7BE4 /* ScheduleListItemView.swift */,
+				01CA0A4D2A6C9CCC00FB7BE4 /* DottedLineView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		01F30BBB29A676970049A728 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				01CA0A452A6C379A00FB7BE4 /* ShalatSchedule */,
+				01CA0A3F2A6C371000FB7BE4 /* Main */,
 				01F30BBF29A676D80049A728 /* Splashscreen */,
 				01F30BBE29A676BE0049A728 /* Explore */,
-				01E26FF92A56CDF30083DC6B /* MainView.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -277,15 +327,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A83FCC29A59BB3009BF6BB /* MainMapView.swift in Sources */,
+				01CA0A442A6C375200FB7BE4 /* Header.swift in Sources */,
 				01A83FCF29A5F0D3009BF6BB /* MiniProductButtonView.swift in Sources */,
 				01F9A9B329A1FA8200D7B59B /* ContentView.swift in Sources */,
 				01A83FD829A617F6009BF6BB /* AppState.swift in Sources */,
 				01F9A9C029A1FD1400D7B59B /* Splashscreen.swift in Sources */,
+				01CA0A422A6C373000FB7BE4 /* TabIndicator.swift in Sources */,
 				01A83FD229A5F3E2009BF6BB /* Color+Ext.swift in Sources */,
+				01CA0A4A2A6C380200FB7BE4 /* ScheduleListItemView.swift in Sources */,
+				01CA0A472A6C37B100FB7BE4 /* ShalatScheduleView.swift in Sources */,
 				01F9A9C229A1FE5700D7B59B /* ExploreView.swift in Sources */,
 				01E26FFA2A56CDF30083DC6B /* MainView.swift in Sources */,
 				01A83FD429A5F811009BF6BB /* ShalatReminderBadges.swift in Sources */,
 				01F30BC329A6807F0049A728 /* MKCoordinateRegion+Ext.swift in Sources */,
+				01CA0A4C2A6C93F900FB7BE4 /* ScheduleListItemViewModel.swift in Sources */,
+				01CA0A4E2A6C9CCC00FB7BE4 /* DottedLineView.swift in Sources */,
 				01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

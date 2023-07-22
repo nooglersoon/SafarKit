@@ -39,6 +39,6 @@ let package = Package(
             dependencies: ["LocationService"]),
         .target(
             name: "ShalatSchedule",
-            dependencies: [])
+            dependencies: ["NetworkService"])
     ]
 )

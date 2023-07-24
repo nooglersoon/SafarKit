@@ -1,15 +1,17 @@
 import SwiftUI
+import LocationService
 
 struct MainView: View {
+    @EnvironmentObject var locationManager: LocationService
     @State var selection = 1
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
-            Header()
+            Header(city: locationManager.userCity ?? "N/A")
             TabIndicator(selectedIndex: $selection)
             TabView(selection: $selection) {
                 Color(.red)
                     .tag(0)
-                Color(.green)
+                CompassView()
                     .tag(1)
                 ShalatScheduleView()
                     .tag(2)

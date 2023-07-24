@@ -20,20 +20,6 @@
                ReferencedContainer = "container:SafarKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ShalatSchedule"
-               BuildableName = "ShalatSchedule"
-               BlueprintName = "ShalatSchedule"
-               ReferencedContainer = "container:SafarKitPackages">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

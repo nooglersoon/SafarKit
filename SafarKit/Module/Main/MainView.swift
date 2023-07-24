@@ -9,7 +9,7 @@ struct MainView: View {
             Header(city: locationManager.userCity ?? "N/A")
             TabIndicator(selectedIndex: $selection)
             TabView(selection: $selection) {
-                Color(.red)
+                CollageView()
                     .tag(0)
                 CompassView()
                     .tag(1)

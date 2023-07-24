@@ -22,6 +22,7 @@
 		01CA0A4E2A6C9CCC00FB7BE4 /* DottedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA0A4D2A6C9CCC00FB7BE4 /* DottedLineView.swift */; };
 		01D38E8F2A6CA47500548FC7 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D38E8E2A6CA47500548FC7 /* CompassView.swift */; };
 		01D38E922A6CA48A00548FC7 /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D38E912A6CA48A00548FC7 /* SunView.swift */; };
+		01E0D0B72A6E837E00E79C29 /* CollageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E0D0B62A6E837E00E79C29 /* CollageView.swift */; };
 		01E26FFA2A56CDF30083DC6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E26FF92A56CDF30083DC6B /* MainView.swift */; };
 		01F086EF2A6CD45A007815C1 /* ShalatSchedule in Frameworks */ = {isa = PBXBuildFile; productRef = 01F086EE2A6CD45A007815C1 /* ShalatSchedule */; };
 		01F30BC329A6807F0049A728 /* MKCoordinateRegion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */; };
@@ -48,6 +49,7 @@
 		01CA0A4D2A6C9CCC00FB7BE4 /* DottedLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedLineView.swift; sourceTree = "<group>"; };
 		01D38E8E2A6CA47500548FC7 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		01D38E912A6CA48A00548FC7 /* SunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunView.swift; sourceTree = "<group>"; };
+		01E0D0B62A6E837E00E79C29 /* CollageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageView.swift; sourceTree = "<group>"; };
 		01E26FF92A56CDF30083DC6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		01F30BC229A6807F0049A728 /* MKCoordinateRegion+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Ext.swift"; sourceTree = "<group>"; };
 		01F9A9AD29A1FA8200D7B59B /* SafarKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafarKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,9 +180,18 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		01E0D0B52A6E836200E79C29 /* Collage */ = {
+			isa = PBXGroup;
+			children = (
+				01E0D0B62A6E837E00E79C29 /* CollageView.swift */,
+			);
+			path = Collage;
+			sourceTree = "<group>";
+		};
 		01F30BBB29A676970049A728 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				01E0D0B52A6E836200E79C29 /* Collage */,
 				01D38E8D2A6CA45900548FC7 /* Compass */,
 				01CA0A452A6C379A00FB7BE4 /* ShalatSchedule */,
 				01CA0A3F2A6C371000FB7BE4 /* Main */,
@@ -369,6 +380,7 @@
 				01CA0A4C2A6C93F900FB7BE4 /* ScheduleListItemViewModel.swift in Sources */,
 				01D38E8F2A6CA47500548FC7 /* CompassView.swift in Sources */,
 				01CA0A4E2A6C9CCC00FB7BE4 /* DottedLineView.swift in Sources */,
+				01E0D0B72A6E837E00E79C29 /* CollageView.swift in Sources */,
 				01F9A9B129A1FA8200D7B59B /* SafarKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

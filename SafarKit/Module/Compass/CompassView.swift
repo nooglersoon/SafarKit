@@ -1,10 +1,12 @@
 import SwiftUI
+import LocationService
 
 struct CompassView: View {
+    @EnvironmentObject var locationManager: LocationService
     var body: some View {
         VStack() {
             Spacer()
-            SunView(degrees: 180)
+            SunView(degrees: locationManager.degrees)
             Spacer()
             HStack(alignment: .center, spacing: 16) {
                 HStack(alignment: .top, spacing: 4) {
